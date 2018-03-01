@@ -1,0 +1,11 @@
+C:\Users\darshan\Desktop\Trappist\InventoryManagment\InventoryManagment\bin\Debug\netcoreapp2.0\InventoryManagment.deps.json
+C:\Users\darshan\Desktop\Trappist\InventoryManagment\InventoryManagment\bin\Debug\netcoreapp2.0\InventoryManagment.runtimeconfig.json
+C:\Users\darshan\Desktop\Trappist\InventoryManagment\InventoryManagment\bin\Debug\netcoreapp2.0\InventoryManagment.runtimeconfig.dev.json
+C:\Users\darshan\Desktop\Trappist\InventoryManagment\InventoryManagment\bin\Debug\netcoreapp2.0\InventoryManagment.dll
+C:\Users\darshan\Desktop\Trappist\InventoryManagment\InventoryManagment\obj\Debug\netcoreapp2.0\InventoryManagment.csprojResolveAssemblyReference.cache
+C:\Users\darshan\Desktop\Trappist\InventoryManagment\InventoryManagment\obj\Debug\netcoreapp2.0\InventoryManagment.csproj.CoreCompileInputs.cache
+C:\Users\darshan\Desktop\Trappist\InventoryManagment\InventoryManagment\obj\Debug\netcoreapp2.0\InventoryManagment.AssemblyInfoInputs.cache
+C:\Users\darshan\Desktop\Trappist\InventoryManagment\InventoryManagment\obj\Debug\netcoreapp2.0\InventoryManagment.AssemblyInfo.cs
+C:\Users\darshan\Desktop\Trappist\InventoryManagment\InventoryManagment\bin\Debug\netcoreapp2.0\InventoryManagment.pdb
+C:\Users\darshan\Desktop\Trappist\InventoryManagment\InventoryManagment\obj\Debug\netcoreapp2.0\InventoryManagment.dll
+C:\Users\darshan\Desktop\Trappist\InventoryManagment\InventoryManagment\obj\Debug\netcoreapp2.0\InventoryManagment.pdb

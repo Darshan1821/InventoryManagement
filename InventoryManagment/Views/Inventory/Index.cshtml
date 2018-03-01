@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Inventory";
+}
+<h2>Products</h2>
+
+<button onclick="location.href='@Url.Action("AddProduct", "Inventory")'" class="btn btn-primary">Add Product</button>
+<div class='row'>
+    <div class='table-responsive'>
+        <table class='table'>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var p in Model)
+                {
+                    <tr>
+                        <td>@(p.Name)</td>
+                        <td>@(p.Price) RS</td>
+                        <td>@(p.Quantity)</td>
+                        <td>@(p.Type)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
