@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Diagnostics;
 using System.Linq;
-using System.Threading.Tasks;
+using InventoryManagment.Models;
 using InventoryManagment.Repository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -31,16 +30,52 @@ namespace InventoryManagment.Controllers
         }
 
         [HttpPost]
-        public IActionResult AddProductToDatabase(IFormCollection form)
+        public IActionResult AddProduct(InventoryModel model)
         {
-            string Name = form["productName"].ToString();
-            double Price = Double.Parse(form["productPrice"].ToString());
-            int Quantity = int.Parse(form["productQuantity"].ToString());
-            string Type = form["productType"].ToString();
+            if (ModelState.IsValid)
+            {
+                var lastProduct = IInventoryRepository.GetAllProduct().Last();
+                IInventoryRepository.AddProduct(lastProduct.Id + 1, model.Name, model.Price, model.Quantity, model.Type);
+                return RedirectToAction(nameof(Index));
+            }
+            return View(model);
+        }
 
-            IInventoryRepository.AddProduct(11,Name,Price,Quantity,Type);
+        public IActionResult EditProduct(int id, string name, double price, int quantity, string type)
+        {
+            if (id <= 0)
+            {
+                return RedirectToAction(nameof(Error));
+            }
+            return View(new InventoryModel() { Id = id, Name = name, Price = price, Quantity = quantity, Type = type });
+        }
 
+        [HttpPost]
+        public IActionResult EditProduct(InventoryModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                IInventoryRepository.UpdateProduct(model.Id,model.Name,model.Price,model.Quantity, model.Type);
+                return RedirectToAction(nameof(Index));
+            }
+
+            return View(model);
+        }
+
+        public IActionResult DeleteProduct(int id)
+        {
+            if (id < 0)
+            {
+                return RedirectToAction(nameof(Error));
+            }
+
+            IInventoryRepository.DeleteProduct(id);
             return RedirectToAction(nameof(Index));
+        }
+
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
 }

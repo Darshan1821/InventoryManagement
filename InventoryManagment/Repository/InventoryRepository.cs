@@ -1,32 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using InventoryManagment.Models;
 
 namespace InventoryManagment.Repository
 {
     public class InventoryRepository : IInventoryRepository
     {
-        public List<InventoryModel> AddProduct(int id, string name, double price, int quantity, string type)
+        public void AddProduct(int id, string name, double price, int quantity, string type)
         {
-            productList.Add(new InventoryModel() { Id = id, Name = name, Price = price, Quantity = quantity, Type = type });
-            return productList;
+            Database.AddProduct(new InventoryModel() { Id = id, Name = name, Price = price, Quantity = quantity, Type = type });   
         }
 
-        public List<InventoryModel> DeleteProduct(string name)
+        public void DeleteProduct(int id)
         {
-            throw new NotImplementedException();
+            Database.DeleteProduct(id);
         }
 
-        public List<InventoryModel> UpdateProduct(int id, string name, double price, int quantity, string type)
+        public void UpdateProduct(int id, string name, double price, int quantity, string type)
         {
-            throw new NotImplementedException();
+            Database.UpdateProduct(id,name,price,quantity,type);
         }
 
         public List<InventoryModel> GetAllProduct()
         {
-            return productList;
+            return Database.GetAllProducts();
         }
-
-        List<InventoryModel> productList = Database.GetAllProducts();
     }
 }

@@ -13131,11 +13131,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\darshan\\Desktop\\Trappist\\InventoryManagment\\InventoryManagment\\InventoryManagment.csproj",
+      "projectUniqueName": "C:\\Users\\darshan\\Downloads\\InventoryManagement\\InventoryManagement\\InventoryManagment\\InventoryManagment.csproj",
       "projectName": "InventoryManagment",
-      "projectPath": "C:\\Users\\darshan\\Desktop\\Trappist\\InventoryManagment\\InventoryManagment\\InventoryManagment.csproj",
+      "projectPath": "C:\\Users\\darshan\\Downloads\\InventoryManagement\\InventoryManagement\\InventoryManagment\\InventoryManagment.csproj",
       "packagesPath": "C:\\Users\\darshan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\darshan\\Desktop\\Trappist\\InventoryManagment\\InventoryManagment\\obj\\",
+      "outputPath": "C:\\Users\\darshan\\Downloads\\InventoryManagement\\InventoryManagement\\InventoryManagment\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
