@@ -17,6 +17,7 @@ namespace InventoryManagment.Models
                 new InventoryModel() { Id=10, Name="Silverbeet", Price=10, Quantity=50, Type="Marrow" },
         };
 
+
         public static void UpdateProduct(int id, string name, double price, int quantity, string type)
         {
             var productIndex = productList.FindIndex(p => p.Id == id);
